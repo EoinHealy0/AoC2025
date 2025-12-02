@@ -1,9 +1,9 @@
 import math
 
-def is_valid_repeating_number_new(number: int, min_subnum_length: int) -> bool:
+def is_valid_repeating_number(number: int, min_subnum_length: int) -> bool:
     num_length = math.floor(math.log10(number)) + 1
                   
-    for subnum_len in range((num_length // 2), min_subnum_length - 1, - 1):
+    for subnum_len in range((num_length // 2), min_subnum_length - 1, -1):
         current_number = number
 
         if num_length % subnum_len == 0:
@@ -32,16 +32,16 @@ def part1(input: list[tuple]) -> int:
 
         if not(minlen == maxlen and minlen % 2 == 1):
             for number in range(min, max + 1):
-                if is_valid_repeating_number_new(number, (math.floor(math.log10(number)) // 2) + 1):
+                if is_valid_repeating_number(number, (math.floor(math.log10(number)) // 2) + 1):
                     total += number
     return total
 
 def part2(input: list[tuple]) -> int:
     total = 0
-    
+
     for min, max in input:
         for number in range(min, max + 1):
-            if is_valid_repeating_number_new(number, 1):
+            if is_valid_repeating_number(number, 1):
                 total += number
     return total
 

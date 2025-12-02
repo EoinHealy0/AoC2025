@@ -25,7 +25,7 @@ def part1(rotations: list[str]) -> int:
     return password
         
 
-def part2(rotations: list[str]):
+def part2(rotations: list[str]) -> int:
     current = START
     password = 0
     

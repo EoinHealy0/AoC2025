@@ -11,7 +11,6 @@ def index_of_max(bank: list[int], start: int, remaining_numbers: int) -> int:
                 break
     return max_index
 
-
 def part1(input: list[list[int]]) -> int:
     joltage = 0
 

@@ -18,7 +18,6 @@ def part1(department: list[list[str]], remove: bool = False) -> int:
                 removable_rolls += 1
     return removable_rolls
 
-
 def part2(department: list[list[str]]) -> int:
     removed_rolls = 0
     

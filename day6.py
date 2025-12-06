@@ -1,4 +1,5 @@
 import re
+
 def get_column_indexes(operators: str) -> list[int]:
     indexes = [0]
     current_index = 0

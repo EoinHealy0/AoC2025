@@ -2,13 +2,11 @@ import re
 
 def get_column_indexes(operators: str) -> list[int]:
     indexes = [0]
-    current_index = 0
 
     for i in range(1, len(operators)):
         if operators[i] == '+' or operators[i] == '*':
             indexes.append(i - 1)
-            current_index += 1
-
+            
     indexes.append(len(operators))
     return indexes
 
